@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 enum Categories {
   bebas,
   bebas_terbatas,
@@ -15,5 +17,5 @@ class Category {
   });
   
   final String name;
-  final String logo;
+  final Image logo;
 }
