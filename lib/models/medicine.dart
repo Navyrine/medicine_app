@@ -3,7 +3,8 @@ import 'package:medicine_app/models/category.dart';
 enum Type{
   tablet,
   cair,
-  bubuk
+  bubuk,
+  kapsul
 }
 
 class Medicine {
