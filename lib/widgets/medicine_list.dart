@@ -27,6 +27,13 @@ class _MedicineListState extends State<MedicineList> {
     });
   }
 
+  void _removeItem(Medicine medicine)
+  {
+    setState(() {
+      _medicineItem.remove(medicine);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     Widget mainContent = const Center(child: Text("No Medicine Item"));
@@ -34,14 +41,20 @@ class _MedicineListState extends State<MedicineList> {
     if (_medicineItem.isNotEmpty) {
       mainContent = ListView.builder(
         itemCount: _medicineItem.length,
-        itemBuilder: (ctx, index) => ListTile(
-          title: Text(_medicineItem[index].name),
-          leading: SizedBox(
-            width: 40,
-            height: 40,
-            child: Image.asset(_medicineItem[index].category.logo),
+        itemBuilder: (ctx, index) => Dismissible(
+          key: ValueKey(_medicineItem[index].id),
+          child: ListTile(
+            title: Text(_medicineItem[index].name),
+            leading: SizedBox(
+              width: 40,
+              height: 40,
+              child: Image.asset(_medicineItem[index].category.logo),
+            ),
+            trailing: Text(_medicineItem[index].type.name.toString()),
           ),
-          trailing: Text(_medicineItem[index].type.name.toString()),
+          onDismissed: (direction) {
+            _removeItem(_medicineItem[index]);
+          },
         ),
       );
     }
