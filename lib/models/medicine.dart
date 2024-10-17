@@ -1,6 +1,6 @@
 import 'package:medicine_app/models/category.dart';
 
-enum Type{
+enum TypeMedicine{
   tablet,
   cair,
   bubuk,
@@ -17,6 +17,6 @@ class Medicine {
 
   final String id;
   final String name;
-  final Type type;
+  final TypeMedicine type;
   final Category category;
 }

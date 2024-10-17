@@ -6,31 +6,31 @@ final medicineItem = [
   Medicine(
     id: "a",
     name: "Antangin",
-    type: Type.cair,
+    type: TypeMedicine.cair,
     category: categoriesItem[Categories.herbal]!,
   ),
   Medicine(
     id: "b",
     name: "Ambeven",
-    type: Type.kapsul,
+    type: TypeMedicine.kapsul,
     category: categoriesItem[Categories.herbal]!,
   ),
   Medicine(
     id: "c",
     name: "Diapet",
-    type: Type.kapsul,
+    type: TypeMedicine.kapsul,
     category: categoriesItem[Categories.herbal]!,
   ),
   Medicine(
     id: "d",
     name: "Laxing",
-    type: Type.kapsul,
+    type: TypeMedicine.kapsul,
     category: categoriesItem[Categories.herbal]!,
   ),
   Medicine(
     id: "e",
     name: "OBH Combi Herbal",
-    type: Type.cair,
+    type: TypeMedicine.cair,
     category: categoriesItem[Categories.herbal]!,
   ),
 ];
